@@ -22,7 +22,8 @@ for _ in range(50):
   print(f'MSE Result: { test_mse}')
   print("Average Mean Squared Error:", average_mse)
   with open('metrics.txt', 'w') as outfile:
-  outfile.write(f'\n Mean Squared Error = {average_mse}.')
+    outfile.write(f'\n Mean Squared Error = {average_mse}.')
+
 
 plt.scatter(X_train, y_train, color='blue', label='Training data')
 
