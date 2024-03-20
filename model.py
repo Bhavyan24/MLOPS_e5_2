@@ -17,12 +17,12 @@ for _ in range(50):
 
   lr.fit(X_train, y_train)
   y_preds = lr.predict(X_test)
-  test_mse = mean_squared_error(y_test, y_preds )
-  average_mse = np.mean(test_mse)
-  print(f'MSE Result: { test_mse}')
-  print("Average Mean Squared Error:", average_mse)
-  with open('metrics.txt', 'w') as outfile:
-    outfile.write(f'\n Mean Squared Error = {average_mse}.')
+test_mse = mean_squared_error(y_test, y_preds )
+average_mse = np.mean(test_mse)
+print(f'MSE Result: { test_mse}')
+print("Average Mean Squared Error:", average_mse)
+with open('metrics.txt', 'w') as outfile:
+  outfile.write(f'\n Mean Squared Error = {average_mse}.')
 
 
 plt.scatter(X_train, y_train, color='blue', label='Training data')
